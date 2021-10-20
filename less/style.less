@@ -1,1 +1,81 @@
+@import 'vars.less';
+@import 'mixins.less';
 
+
+body {
+	margin: 0;
+	background-color: @mainColor;
+}
+.intro {
+    background: linear-gradient(0deg, fade(@lineGradientColor, 20%) 8.84%, fade(@lineGradientColor, 0%) 31.12%);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    &__img{
+        position: absolute;
+        right: 5vw;
+        top: 10vh;
+        z-index: -1;
+    }
+
+    &__navigation {
+        display: flex;
+        padding: 2em 5em;
+        justify-content: space-between;
+
+        &--menu {
+            width: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            span {
+                .menu_span
+            }
+
+            &::after {
+                content: '';
+                .menu_span
+            }
+
+            &::before {
+                content: '';
+                .menu_span
+            }
+        }
+    }
+
+    &__content {
+        padding-top: 5em;
+        padding-left: 10vw;
+        padding-right: 40vw;
+        color: @blue_1;
+
+        &--title {
+            font-family: Galien;
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        &--text {
+            padding-right: 10vw;
+            font-family: Gilroy;
+            font-size: 16px;
+            margin-bottom: 6em;
+        }
+
+        &--btn {
+            padding: 1em 2em;
+            background-color: @blue_4;
+            box-shadow: 5px 10px 20px fade(@blue_3, 20%);
+            font-family: Gilroy;
+            font-size: 16px;
+            text-align: center;
+            border-radius: @radius;
+            text-decoration: none;
+            color: @mainColor;
+        }
+    }
+}
