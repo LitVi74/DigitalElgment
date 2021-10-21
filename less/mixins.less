@@ -1,7 +1,23 @@
-@import 'vars.less';
+//main: style.less 
 
-.menu_span {
+.menu_span() {
     display: block;
     height: 0.3em;
     background-color: @blue_3;
+}
+
+.btn() {
+    padding: 1em 2em;
+    background-color: @blue_4;
+    box-shadow: 5px 10px 20px fade(@blue_3, 20%);
+    font-family: Gilroy;
+    font-size: 16px;
+    text-align: center;
+    border-radius: @radius;
+    text-decoration: none;
+    color: @mainColor;
+
+    &:hover {
+        background-color: darken( @blue_4, 20% );
+    }
 }

@@ -22,7 +22,7 @@ const config = {
 };
 
 function styles () {
-    return src(config.paths.less)
+    return src('./less/style.less')
         .pipe(less())
         .pipe(concat(config.output.cssName))
         .pipe(cleancss())
