@@ -2,109 +2,11 @@
 .footer {
     background: @blue_4;
     border-radius: @radius*20 0 0 0;
+
+    @media @breakpoint-mb {
+        border-radius: @radius*10 0 0 0;
+    }
 }
 
 @import 'our-client';
-
-.info {
-    background: @blue_2;
-    border-radius: 0px 200px 0px 0px;
-    margin-right: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__tolk {
-        padding: 5rem 0 5rem 10rem ;
-        margin-right: 14rem;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid fade(@mainColor, 40%);
-        width: 80%;
-
-        &--content {
-            .Gilroy(@mainColor);
-
-            .content__title {
-                width: 10em;
-                font-size: 36px;
-                line-height: 46px;
-                font-weight: bold;
-            }
-
-            .content__text {
-                .text();
-                opacity: 0.6;
-                width: 50%;
-            }
-        }
-
-        &--btn {
-            .btn();
-            height: 1.5rem;
-            width: 14rem;
-        }
-    }
-
-    &__bar {
-        display: flex;
-        align-self: flex-start;
-        padding: 5rem 10rem;
-        .Gilroy(@mainColor);
-
-        .bar--contacts{
-            display: flex;
-            align-items: center;
-
-            &__img {
-                border: 1px solid black;
-                width: 48px;
-                padding: 8px 0;
-                margin-right: 0.5rem;
-            }
-
-            &__title {
-                font-size: 28px;
-                line-height: 46px;
-                font-weight: bold;
-            }
-        }
-
-        &--ul {
-            margin: 0 2rem;
-
-            ul {
-                margin-left: 0;
-                padding-left: 0;
-            }
-
-            &:first-child {
-                margin-right: 10rem;
-            }
-        }
-
-        &--title {
-            font-size: 20px;
-            line-height: 30px;
-            font-weight: bold;
-        }
-
-        &--elem {
-            .text();
-            list-style-type: none; 
-            margin: 0.5rem 0;
-        }
-
-        .afrianska::before {
-            .item('A.');
-        }
-
-        .phon::before {
-            .item('T.');
-        }
-
-        .email::before {
-            .item('E.');
-        }
-    }
-}
+@import 'info';

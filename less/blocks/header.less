@@ -3,14 +3,29 @@
 .intro {
     background: linear-gradient(0deg, fade(@blue_5, 20%) 8.84%, fade(@blue_5, 0%) 31.12%);
     position: relative;
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
+
+    @media @breakpoint-tab {
+        background-color: fade(@mainColor, 30%);
+        height: 115vh;
+    }
 
     &__img{
         position: absolute;
         right: 5vw;
         top: 10vh;
         z-index: -1;
+
+        @media @breakpoint-tab {
+            width: 40vw;
+            top: 15vh;
+        }
+
+        @media @breakpoint-mb {
+            width: 70vw;
+            top: 15vh;
+        }
     }
 
     &__navigation {
@@ -39,13 +54,25 @@
                 .menu_span()
             }
         }
+
+        @media @breakpoint-mb {
+            padding: 1em;
+        }
     }
 
     &__content {
-        padding-top: 5em;
+        padding-top: 5vw;
         padding-left: 10vw;
-        padding-right: 40vw;
+        padding-right: 30vw;
         .Gilroy(@blue_1);
+
+        @media @breakpoint-tab {
+            padding: 0 10vw;;
+        }
+        
+        @media @breakpoint-mb {
+            padding: 5vw 10vw;;
+        }
 
         &--title {
             font-family: Galien;
@@ -54,13 +81,23 @@
             margin-bottom: 0.5em;
             line-height: 74px;
             letter-spacing: 0.04em;
+
+            @media @breakpoint-tab {
+                font-size: 45px;
+                line-height: 45px;
+            }
+
+            @media @breakpoint-mb {
+                font-size: 34px;
+                line-height: 39px;
+            }
         }
 
         &--text {
             padding-right: 10vw;
-            margin-bottom: 6em;
+            margin-bottom: 6vh;
             opacity: 0.6;
-            .text()
+            .text();
         }
 
         &--btn {

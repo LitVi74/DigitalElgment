@@ -4,14 +4,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5rem 12rem;
+    padding: 6vh 14vw;
     .Gilroy(@mainColor);
 
     &__title {
-        font-size: 36px;
         font-weight: bold;
         width: 15rem;
-        line-height: 46px;
+        .title();
     }
 
     &__text {
@@ -19,6 +18,11 @@
         width: 50%;
         opacity: 0.6;
         .text();
+
+        @media @breakpoint-tab {
+            margin: 1vw;
+            width: 100%;
+        }
     }
 
     &__logos {
@@ -26,6 +30,13 @@
         grid-template: repeat(2, 4rem) / repeat(4, 10rem);
         text-align: center;
         margin: 3rem;
+
+        @media @breakpoint-tab {
+            grid-template: repeat(2, 3.5rem) / repeat(4, 8rem);
+        }
+        @media @breakpoint-mb {
+            grid-template: repeat(2, 4rem) / repeat(4, 5rem);
+        }
     }
 }
 .our-client__logos--elems {
