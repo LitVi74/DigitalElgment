@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <div class="info__tolk--btn">
-                    <a href="#">Let’s Talk</a>
+                    <a href="javascript: void(0)" id="btnTolk">Let’s Talk</a>
                 </div>
             </div>
             <div class="info__bar">
@@ -172,6 +172,15 @@
             </div>
         </div>
     </footer>
-    <script src="src/main.min.js"></script>
+    <div class="modal" id="myModal">
+        <form class="modal__window " onclick="event.stopPropagation()">
+            <div class="modal__window--title">SEND US MESSAGE</div>
+            <label class="modal__window--lable">Full Name<input name="name" placeholder="Your Name" class="modal__window--input"></label>
+            <label class="modal__window--lable">Email<input name="email" placeholder="Your Email" class="modal__window--input"></label>
+            <label class="modal__window--lable">Message<textarea rows="4" cols="50" name="subject" placeholder="Your Message" class="modal__window--input"></textarea></label>
+            <input class="modal__window--btn" type="submit" value="SUBMIT">
+        </form>
+    </div>
+    <script type="module" src="src/main.min.js"></script>
 </body>
 </html>

@@ -36,9 +36,9 @@ function styles () {
 }
 
 function scripts () {
-    return src(config.paths.js)
+    return src('./src/js/main.js')
         .pipe(concat(config.output.jsName))
-        .pipe(terser())
+        //.pipe(terser())
         .pipe(dest(config.output.jsPath))
         .pipe(browserSync.stream())
 }
