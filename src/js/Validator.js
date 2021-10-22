@@ -14,7 +14,6 @@ export class Validator {
                 this.result = false;
                 elem.classList.add("error");
 
-                console.log(elem);
                 break;
             }
         }

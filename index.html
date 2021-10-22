@@ -173,13 +173,16 @@
         </div>
     </footer>
     <div class="modal" id="myModal">
-        <form class="modal__window " onclick="event.stopPropagation()">
+        <form class="modal__window " onclick="event.stopPropagation()" action="https://httpbin.org/anything">
             <div class="modal__window--title">SEND US MESSAGE</div>
             <label class="modal__window--lable">Full Name<input name="name" placeholder="Your Name" class="modal__window--input" data-rule="required"></label>
             <label class="modal__window--lable">Email<input name="email" placeholder="Your Email" class="modal__window--input" data-rule="required email"></label>
             <label class="modal__window--lable">Message<textarea rows="4" cols="50" name="subject" placeholder="Your Message" class="modal__window--input"></textarea></label>
             <input class="modal__window--btn" type="submit" value="SUBMIT">
         </form>
+    </div>
+    <div class="popup__bg">
+        <div class="popup"></div>
     </div>
     <script type="module" src="src/main.min.js"></script>
 </body>

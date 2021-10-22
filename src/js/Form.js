@@ -4,12 +4,12 @@ export class Form {
     constructor(formElem) {
         this.form = formElem;
 
-        this.form.addEventListener('submit', this.onSubmit);
+        this.form.addEventListener('submit', this.onSubmit.bind(this));
     }
 
     onSubmit () {
         event.preventDefault();
-        let childs =  this.elements;
+        let childs = event.target.elements;
 
         let error = false;
         for(let i = 0; i < childs.length; i++) {
@@ -26,5 +26,24 @@ export class Form {
                 error = true;
             }
         }
+
+        if(!error) this.sendForm(this.form);
+
     }
+
+    sendForm (form) {
+
+        let formData = new FormData(form);
+        fetch(form.action, {
+            method: "POST",
+            body: formData
+        })
+            .then(this.showMessage('Your message successfully sent'))
+            .catch(showMessage('Oops'));
+    }
+    
+    showMessage(text) {
+        alert(text);
+    }
+
 }

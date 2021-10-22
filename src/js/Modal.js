@@ -7,11 +7,24 @@ export class Modal {
 
         this.form = new Form(this.modal.getElementsByTagName('form')[0]);
 
-        this.btn.addEventListener('click', this.onClick.bind(this.modal, 'flex'));
-        this.modal.addEventListener('click', this.onClick.bind(this.modal, 'none'));
+        this.btn.addEventListener('click', this.onClick.bind(this, 'flex', this.disableScrolling));
+        this.modal.addEventListener('click', this.onClick.bind(this, 'none', this.enableScrolling));
     }
 
-    onClick (display) {
-        this.style.display = display;
+    onClick (display, func) {
+        this.modal.style.display = display;  
+        
+        let scroll = func;
+        scroll();
+    }
+
+    disableScrolling(){
+        let x=window.scrollX;
+        let y=window.scrollY;
+        window.onscroll=function(){window.scrollTo(x, y);};
+    }
+    
+    enableScrolling(){
+        window.onscroll=function(){};
     }
 }
