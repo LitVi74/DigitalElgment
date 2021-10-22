@@ -9,7 +9,7 @@
 
 .about-us {
     display: inline-grid;
-    grid-template: repeat(4, 19rem) / repeat(2, 25rem);
+    grid-template: repeat(4, 20rem) / repeat(2, 30rem);
     margin: 10rem;
 
     &__title {
@@ -44,17 +44,18 @@
 
         &--content {
             width: 70%;
-            margin: 3rem;
-            color: @blue_1;
-            font-family: Gilroy;
+            margin: 2rem;
+            .Gilroy(@blue_1);
 
             .content__title {
+                margin-bottom: 1em;
                 font-size: 20px;
                 font-weight: bold;
+                line-height: 30px;
             }
 
             .content__text {
-                font-size: 16px;
+                .text()
             }
         }
 
@@ -65,8 +66,9 @@
             align-items: center;
             
             .link__text {
-                color: @blue_4;
+                .Gilroy(@blue_4);
                 font-size: 14px;
+                line-height: 30px;
                 text-decoration: none;
             }
 

@@ -1,0 +1,53 @@
+// main: ../style.less  
+
+.our-client {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 12rem;
+    .Gilroy(@mainColor);
+
+    &__title {
+        font-size: 36px;
+        font-weight: bold;
+        width: 15rem;
+        line-height: 46px;
+    }
+
+    &__text {
+        margin-left: 7rem;
+        width: 50%;
+        opacity: 0.6;
+        .text();
+    }
+
+    &__logos {
+        display: grid;
+        grid-template: repeat(2, 4rem) / repeat(4, 10rem);
+        text-align: center;
+        margin: 3rem;
+    }
+}
+.our-client__logos--elems {
+    height: 100%;
+    border: 1px solid fade(@mainColor, 40%);
+    border-left-width: 0;
+    border-top-width: 0;
+    .grid(4, 2);
+
+    .elem__logo{
+        padding: 15% 0;
+    }
+
+    &:nth-child(4n) {
+        border-right-width: 0;
+    }
+
+    &:nth-child(n+5){
+        border-bottom-width: 0;
+    }
+
+    .more {
+        background: fade(@blue_1, 20%);
+    }
+}
