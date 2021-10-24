@@ -1,6 +1,5 @@
 export class Popup {
     constructor (text) {
-        console.log(text);
         this.bgBlock = document.getElementById('myPopup');
         this.textBlock = this.bgBlock.querySelector('.popup');
 
