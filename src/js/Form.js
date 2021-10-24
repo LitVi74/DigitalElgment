@@ -1,4 +1,5 @@
 import {Validator} from './Validator.js'
+import {Popup} from './Popup.js'
 
 export class Form {
     constructor(formElem) {
@@ -32,18 +33,19 @@ export class Form {
     }
 
     sendForm (form) {
-
         let formData = new FormData(form);
-        fetch(form.action, {
+        fetch(form.active, {
             method: "POST",
             body: formData
         })
-            .then(this.showMessage('Your message successfully sent'))
-            .catch(showMessage('Oops'));
+            .then(response => this.showMessage('Your message successfully sent'))
+            .catch(err => this.showMessage('<strong>Oops</strong><br>' + err));
     }
     
     showMessage(text) {
-        alert(text);
+        let popup = new Popup(text);
+        
+        popup.show();
     }
 
 }
