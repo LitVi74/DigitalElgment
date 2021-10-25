@@ -5,7 +5,9 @@ export class Popup {
 
         this.textBlock.innerHTML = text;
 
-        this.bgBlock.addEventListener('click', this.onClick);
+        if (this.bgBlock){
+            this.bgBlock.addEventListener('click', this.onClick);
+        }
     }
 
     show () {

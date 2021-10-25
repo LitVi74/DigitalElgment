@@ -1,6 +1,6 @@
 export class Validator {
     constructor(rulesList, elem) {
-        let rules = {
+        const RULES = {
             email: /^\w{1,}@\w{1,}.\w{1,}$/,
             required: /^\w{1,}/,
         }
@@ -10,7 +10,7 @@ export class Validator {
         for(let i = 0; i < rulesList.length; i++) {
             let rule = rulesList[i];
 
-            if(!rules[rule].test(elem.value)) {
+            if(!RULES[rule].test(elem.value)) {
                 this.result = false;
                 elem.classList.add("error");
 

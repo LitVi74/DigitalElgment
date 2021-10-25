@@ -12,6 +12,11 @@
     grid-template: repeat(4, 20rem) / repeat(2, 30rem);
     margin: 10rem;
 
+    @media @breakpoint-sm{
+        grid-template: repeat(4, 23rem) / repeat(2, 30rem);
+        margin: 5rem 1rem;
+    }
+
     @media @breakpoint-tab {
         grid-template: repeat(4, 23rem) / repeat(2, 17rem);
         margin: 5rem 1rem;
@@ -51,7 +56,7 @@
             margin: 0.5rem;
         }
 
-        &--img {
+        &-img {
             height: 96px;
             margin-top: 2rem;
         }
@@ -83,12 +88,13 @@
             align-self: flex-start;
             display: flex;
             align-items: center;
+            text-decoration: none;
             
             .link__text {
                 .Gilroy(@blue_4);
                 font-size: 14px;
                 line-height: 30px;
-                text-decoration: none;
+                
             }
 
             .link_arrow {

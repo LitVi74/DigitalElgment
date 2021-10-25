@@ -8,10 +8,10 @@
 
     @media @breakpoint-tab {
         background-color: fade(@mainColor, 30%);
-        height: 115vh;
+        height: auto;
     }
 
-    &__img{
+    &-img{
         position: absolute;
         right: 5vw;
         top: 10vh;
@@ -19,11 +19,13 @@
 
         @media @breakpoint-tab {
             width: 40vw;
+            height: auto;
             top: 15vh;
         }
 
         @media @breakpoint-mb {
             width: 70vw;
+            height: auto;
             top: 15vh;
         }
     }
@@ -33,7 +35,7 @@
         padding: 2em 5em;
         justify-content: space-between;
 
-        &--menu {
+        &-menu {
             width: 2em;
             display: flex;
             flex-direction: column;
@@ -67,11 +69,13 @@
         .Gilroy(@blue_1);
 
         @media @breakpoint-tab {
-            padding: 0 10vw;;
+            padding: 0 10vw;
+            padding-bottom: 10vw;
         }
         
         @media @breakpoint-mb {
-            padding: 5vw 10vw;;
+            padding: 5vw 10vw;
+            padding-bottom: 12vw;
         }
 
         &--title {
@@ -81,6 +85,11 @@
             margin-bottom: 0.5em;
             line-height: 74px;
             letter-spacing: 0.04em;
+
+            @media @breakpoint-sm {
+                font-size: 78px;
+                line-height: 88px;
+            }
 
             @media @breakpoint-tab {
                 font-size: 45px;
@@ -100,7 +109,7 @@
             .text();
         }
 
-        &--btn {
+        &-btn {
             margin-top: 10vh;
             .btn();
         }

@@ -5,7 +5,10 @@ export class Form {
     constructor(formElem) {
         this.form = formElem;
 
-        this.form.addEventListener('submit', this.onSubmit.bind(this));
+        if (this.form) {
+            this.form.addEventListener('submit', this.onSubmit.bind(this));
+            this.form.onclick = () => event.stopPropagation();
+        }
     }
 
     onSubmit () {
@@ -39,6 +42,12 @@ export class Form {
             body: formData
         })
             .then(response => this.showMessage('Your message successfully sent'))
+            .then(result => {
+                form.reset();
+                if(form.parentNode){
+                    form.parentNode.dispatchEvent(new Event('click')); 
+                }
+            })
             .catch(err => this.showMessage('<strong>Oops</strong><br>' + err));
     }
     
@@ -47,5 +56,4 @@ export class Form {
         
         popup.show();
     }
-
 }

@@ -30,6 +30,8 @@
         grid-template: repeat(2, 4rem) / repeat(4, 10rem);
         text-align: center;
         margin: 3rem;
+        list-style-type: none;
+        padding-left: 0;
 
         @media @breakpoint-tab {
             grid-template: repeat(2, 3.5rem) / repeat(4, 8rem);
@@ -40,15 +42,11 @@
     }
 }
 .our-client__logos--elems {
-    height: 100%;
     border: 1px solid fade(@mainColor, 40%);
     border-left-width: 0;
     border-top-width: 0;
     .grid(4, 2);
-
-    .elem__logo{
-        padding: 15% 0;
-    }
+    padding: 15% 0;
 
     &:nth-child(4n) {
         border-right-width: 0;
@@ -58,7 +56,7 @@
         border-bottom-width: 0;
     }
 
-    .more {
+    &.more {
         background: fade(@blue_1, 20%);
     }
 }
