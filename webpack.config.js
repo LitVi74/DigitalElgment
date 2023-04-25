@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
@@ -49,6 +50,10 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash:8].css",
+    }),
+    new ESLintPlugin({
+      context: path.resolve(__dirname, "src"),
+      extensions: ["js"],
     }),
   ],
   devServer: {
