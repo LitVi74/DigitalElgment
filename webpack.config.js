@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.(s[ac]|c)ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
@@ -32,7 +32,7 @@ module.exports = {
       {
         test: /\.(woff2?|eot|ttf|otf)$/i,
         type: "asset/resource",
-      }
+      },
     ],
   },
   plugins: [
