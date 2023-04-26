@@ -1,9 +1,7 @@
-$bg: #002B49;
+@import 'styles/head';
 
-body {
-  background-color: $bg;
-  font-size: 18px;
-  margin: 0 auto;
-  max-width: 42em;
-  width: 88%;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
