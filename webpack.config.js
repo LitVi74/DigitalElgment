@@ -62,8 +62,8 @@ module.exports = {
     }),
   ],
   devServer: {
-    watchFiles: path.resolve(__dirname, "src"),
-    port: 5000,
+    watchFiles: path.join(__dirname, "src"),
+    port: 9000,
   },
   optimization: {
     minimizer: [

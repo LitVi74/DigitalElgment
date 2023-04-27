@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Galien;
+  src: url('/src/res/fonts/galien/Galien-Regular.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: Galien;
+  src: url('/src/res/fonts/galien/Galien-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url('/src/res/fonts/gilroy/gilroy-regular.ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url('/src/res/fonts/gilroy/gilroy-bold.ttf');
+  font-weight: bold;
+}
+
+$mineTitleFont: Galien;
+$descriptionFont: Gilroy;
