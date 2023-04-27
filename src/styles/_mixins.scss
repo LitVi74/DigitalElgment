@@ -6,7 +6,7 @@
   @media ( min-width: 1000px ) {
     font-size: 1rem;
   }
-  font: 2.5rem fonts.$descriptionFont, sans-serif;
+  font: fonts.$descriptionFont;
   color: $color;
   letter-spacing: 0.05rem;
 }
@@ -16,13 +16,12 @@
     font-size: 1rem;
     border-radius: 0.625rem;
   }
-  font: 2.5rem fonts.$descriptionFont, sans-serif;
+  font: fonts.$descriptionFont;
   color: colors.$white;
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.04rem;
   padding: 1em 2em;
-  box-shadow: 5px 10px 20px fade(colors.$blue_03, 20%);
   cursor: pointer;
   border: none;
   border-radius: 1.625rem;
