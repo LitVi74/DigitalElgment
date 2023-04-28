@@ -1,10 +1,20 @@
 @import 'styles/head';
 @import 'styles/hero';
 @import 'styles/what-we-do';
+@import 'styles/our-client';
 @import 'styles/footer';
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/*
+  костыль для фона за футерем, не хочется обьединять 2 блока общим родителем для фона
+  To do: найти способ растянуть main за footer без "проваливания" контента под footer
+*/
+
+body {
+  overflow-x: hidden;
 }
