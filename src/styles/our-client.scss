@@ -31,6 +31,7 @@
   &__list {
     @media ( min-width: 1000px ) {
       grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1px;
     }
     text-align: center;
     display: grid;
