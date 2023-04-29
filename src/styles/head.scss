@@ -1,0 +1,44 @@
+@use './colors';
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 5.25rem 0;
+
+  &__nav-button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    &:before,
+    &:after,
+    span {
+      display: block;
+      width: 100%;
+      height: 0.2rem;
+      content: '';
+      transition: 0.5s;
+      background-color: colors.$blue_03;
+    }
+
+    &_active {
+      &:before {
+        transform: translateY(0.4rem) rotate(135deg);
+      }
+
+      &:after {
+        transform: translateY(-0.4rem) rotate(-135deg);
+      }
+
+      span {
+        transform: scale(0);
+      }
+    }
+  }
+}

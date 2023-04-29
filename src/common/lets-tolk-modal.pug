@@ -1,0 +1,10 @@
+aside(class=["modal", "modal_nonactive"] id="letsTalkModal")
+  form.modal__window(action="https://httpbin.org/anything")
+    h1.modal__window--title Send us message
+    label.modal__window--lable Full Name
+      input.modal__window--input(name="name" placeholder="Your Name" data-rule="required")
+    label.modal__window--lable Email
+      input.modal__window--input(name="email" placeholder="Your Email" data-rule="required email")
+    label.modal__window--lable Message
+      textarea.modal__window--input(rows="4" cols="50" name="subject" placeholder="Your Message")
+    button.modal__window--btn(type="submit") Submit

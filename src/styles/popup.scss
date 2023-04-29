@@ -1,0 +1,42 @@
+@use 'colors';
+@use 'mixins';
+
+.popup {
+  @include mixins.description(colors.$blue_01);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+
+  &:before {
+    width: 2rem;
+    height: 2rem;
+    content: '';
+  }
+
+  &_active {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &_nonactive {
+    display: none;
+  }
+
+  &_success {
+    background: #68d391;
+
+    &:before {
+      background: url('/src/res/ok.svg') center / cover no-repeat;
+    }
+  }
+
+  &_error {
+    background: #f58a8a;
+
+    &:before {
+      background: url('/src/res/cancel.svg') center / cover no-repeat;
+    }
+  }
+}
