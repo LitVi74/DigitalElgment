@@ -16,7 +16,4 @@ class NavButtonAction {
   }
 }
 
-const { handleNavButtonClick } = new NavButtonAction();
-const navButton = document.getElementById("nav-button");
-
-navButton.addEventListener("click", handleNavButtonClick);
+export default new NavButtonAction();
