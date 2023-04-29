@@ -1,5 +1,6 @@
 import FormValidation from "./formValidation";
 import LetsTalkAction from "./letsTalkAction";
+import PopupAction from "./popupAction";
 
 class ModalFormAction {
   constructor() {
@@ -51,13 +52,13 @@ class ModalFormAction {
           throw new Error("server error");
         }
 
-        console.log("Your message successfully sent");
+        PopupAction.showSuccessPopup("Your message successfully sent");
       })
       .then(() => {
         this.form.reset();
         LetsTalkAction.handleLetsTalkButtonClick();
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => PopupAction.showErrorPopup(`Oops, ${err.message}`));
   }
 }
 

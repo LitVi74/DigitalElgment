@@ -3,6 +3,7 @@ import NavButtonAction from "./scripts/navButtonAction";
 import LetsTalkAction from "./scripts/letsTalkAction";
 import ModalAction from "./scripts/modalAction";
 import ModalFormAction from "./scripts/modalFormAction";
+import PopupAction from "./scripts/popupAction";
 
 const navButton = document.getElementById("nav-button");
 navButton.addEventListener("click", NavButtonAction.handleNavButtonClick);
@@ -18,3 +19,6 @@ modalForm.addEventListener("click", ModalAction.handleCloseModal);
 const form = modalForm.getElementsByTagName("form")[0];
 ModalFormAction.formElement = form;
 form.addEventListener("submit", ModalFormAction.handleFormSubmit);
+
+const popup = document.getElementsByClassName("popup")[0];
+PopupAction.popupElement = popup;
